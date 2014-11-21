@@ -1,6 +1,7 @@
 # Jenny
 
-TODO: Write a gem description
+Jenny is a suite of scripts and support tools for generating new modules, gems and vagrant configurations
+for Future Publishing systems.
 
 ## Installation
 
