@@ -6,7 +6,8 @@ module Jenny
     desc 'vagrant NAME', 'Create a new Vagrant configuration'
     method_option :name
     def vagrant
-    	puts 'Creating new Vagrant : #{options[:name]' 
+    	require 'jenny/cli/vagrant'
+    	Jenny::CLI::Vagrant.run(options)
     end
 
   end
