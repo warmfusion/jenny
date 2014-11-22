@@ -8,9 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = Jenny::VERSION
   spec.authors       = ["Toby Jackson"]
   spec.email         = ["admin@warmfusion.co.uk"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = "jenny-#{spec.version}"
+  spec.description   = 'A command line tool that creates vagrant, puppet module and other frequently 
+  instantiated project types so that conventions are followed more easily'
+  spec.homepage      = "http://github.com/warmfusion/jenny"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
