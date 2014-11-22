@@ -3,11 +3,11 @@ require 'thor'
 module Jenny
   class CLI < Thor
 
-    desc 'vagrant NAME', 'Create a new Vagrant configuration'
-    method_option :name
-    def vagrant
-    	require 'jenny/cli/vagrant'
-    	Jenny::CLI::Vagrant.run(options)
+    desc 'vagrant HOSTNAME', 'Create a new Vagrant configuration with HOSTNAME given'
+    method_option "fqdn", :type => :string, :aliases => '-f', :default => 'local', :desc => 'The FQDN suffix for your hostname' 
+    def vagrant(hostname)
+    	require 'jenny/generators/vagrant'
+    	Jenny::Generators::Vagrant.start( [ hostname, options[:fqdn] ])
     end
 
   end

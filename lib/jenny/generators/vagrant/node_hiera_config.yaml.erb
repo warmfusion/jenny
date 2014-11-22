@@ -1,0 +1,25 @@
+---
+#
+# Configuration for <%= name %>
+# ---------
+# Author  : <%= ENV['USER'] %>
+# Date    : <%= Time.now.strftime("%Y-%m-%d") %>
+# --------
+# Enter any machine specific configuration you wish to include below
+# and it will be imported into hiera automatically when you run vagrant up
+#
+# You can access these variables from puppet using heira('variable')
+# See online hiera and puppet documentation for more information.
+
+
+# Include modules/classes in your VM using this declaration
+#classes
+# - mymodule
+
+# More specific module configuration can be provided below.
+
+# example::config
+#   hostname: <%= name %>
+#   colors:
+#      - blue
+#      - red

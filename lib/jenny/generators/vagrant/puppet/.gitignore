@@ -1,0 +1,4 @@
+# Puppet Librarian temporary directory
+.tmp
+# Puppet librarian deletes this directory - including the .gitignore so keep git status clean
+modules

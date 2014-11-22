@@ -34,3 +34,4 @@ TODO: Write usage instructions here
 ## Testing
 
     $ bundle exec cucumber features
+    $ bundle exec bin/jenny vagrant
