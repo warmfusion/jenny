@@ -1,7 +1,8 @@
 # Jenny
 
 Jenny is a suite of scripts and support tools for generating new modules, gems and vagrant configurations
-for Future Publishing systems.
+
+TODO: Rename project as 'jenny' already exists as an online gem and I bet it'll cause problems if I reuse that name :-(
 
 ## Installation
 
@@ -21,7 +22,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    jenny vagrant myProject [--fqdn local.network.com]
+    jenny help
+    jenny help vagrant
 
 ## Contributing
 
