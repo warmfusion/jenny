@@ -10,3 +10,7 @@ Feature: CLI
   Scenario: Create new Vagrant
     When I run `jenny vagrant NewEnvironment`
     Then the output should contain "NewEnvironment"
+
+  Scenario: Get Current Version
+    When I run `jenny --version`
+    Then the output should match /\d+\.\d+\.\d+/
