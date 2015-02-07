@@ -31,14 +31,14 @@ module Jenny
 				template("node_hiera_config.yaml.erb", "#{name}/puppet/manifests/configuration/#{name.downcase}.#{domain.downcase}.yaml")
 	    end
 
-	    	    # Create the hiera configuration file for this machine
-	  	def create_initial_site_module_config
-				template("site_module-init.pp.erb", "#{name}/puppet/site-modules/manifests/#{name.downcase}/init.pp")
+	    def git_prepare
+	    	inside (name) do
+		    	run( "git init" )
+		    	run( "git add ." )
+		    	run( "git commit -m 'New project created by warmfusion/jenny for %s' " % ENV['USER'] )
+		    end
 	    end
 
-	    def git_init
-	    	git :init
-	    end
 	    # Tell Thor Generator where to find the templates
 	    def self.source_root
 	      File.dirname(__FILE__) + "/vagrant"
