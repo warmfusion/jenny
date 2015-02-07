@@ -1,4 +1,4 @@
-forge 'http://forge.puppetlabs.com'
+forge "https://forgeapi.puppetlabs.com"
 
 # You can include puppet modules dynamically using the following 
 # syntax examples:

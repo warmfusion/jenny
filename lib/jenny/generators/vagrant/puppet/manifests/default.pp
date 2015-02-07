@@ -2,8 +2,9 @@
 #	$myvariable = hiera(myvar)
 #	notice("My variable is: ${myvariable}")
 
+node basenode {}
 
-node default {
+node default inherits basenode {
 
   # Ubuntu gets out of date real quick
   exec { "apt-update":
@@ -11,5 +12,8 @@ node default {
   }
 
   Exec["apt-update"] -> Package <| |>
+
+  # Create the classes defined by the yaml
+  hiera_include( 'classes' )
 
 }

@@ -31,6 +31,14 @@ module Jenny
 				template("node_hiera_config.yaml.erb", "#{name}/puppet/manifests/configuration/#{name.downcase}.#{domain.downcase}.yaml")
 	    end
 
+	    	    # Create the hiera configuration file for this machine
+	  	def create_initial_site_module_config
+				template("site_module-init.pp.erb", "#{name}/puppet/site-modules/manifests/#{name.downcase}/init.pp")
+	    end
+
+	    def git_init
+	    	git :init
+	    end
 	    # Tell Thor Generator where to find the templates
 	    def self.source_root
 	      File.dirname(__FILE__) + "/vagrant"
